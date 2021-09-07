@@ -36,6 +36,7 @@ miformulario.addEventListener("submit", (ev) => {
         });
     
         localStorage.setItem("token",token); //eslint-disable-line
+        window.location = "chat.html";//eslint-disable-line
       }
     })
     .catch((err) => {
@@ -64,6 +65,7 @@ function onSignIn(googleUser) {//eslint-disable-line
     .then((res) => res.json())
     .then(({ token }) => {
       localStorage.setItem("token", token); //eslint-disable-line
+      window.location = "chat.html";//eslint-disable-line
     })
     .catch(console.log);
 }
