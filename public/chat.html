@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <title>Chat</title>
-</head>
-<body class="container" style="background: #333;color: #fff;">
+  </head>
+  <body class="container" style="background: #333; color: #fff">
     <div class="row mt-5">
-        <div class="col-sm-6">
-            <h3>Enviar mensaje</h3>    
-            <hr>
-            <input type="text" name="" id="txtuid" class="form-control mb-2" placeholder="uid" autocomplete="off"> 
-            <input type="text" name="" id="txtMensaje" class="form-control mb-2" placeholder="Mensajes" autocomplete="off"> 
-            <h2>Usuarios</h2>
-            <hr>
-            <ul id="ulUsuario"></ul>
-        </div>
-        <div class="col-sm-6">
-            <h2>Chat Completo</h2>
-            <hr>
-            <ul id="ulMensajes"></ul>
-        </div>
+      <div class="col-sm-6">
+        <h3>Enviar mensaje</h3>
+        <hr />
+        <input
+          type="text"
+          name=""
+          id="txtuid"
+          class="form-control mb-2"
+          placeholder="uid"
+          autocomplete="off"
+        />
+        <input
+          type="text"
+          name=""
+          id="txtMensaje"
+          class="form-control mb-2"
+          placeholder="Mensajes"
+          autocomplete="off"
+        />
+        <h2>Usuarios</h2>
+        <hr />
+        <ul id="ulUsuario"></ul>
+      </div>
+      <div class="col-sm-6">
+        <h2>Chat Completo</h2>
+        <hr />
+        <ul id="ulMensajes"></ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6"></div>
+      <div class="col-sm-6">
+        <h2>Chat Privado</h2>
+        <hr />
+        <ul id="ulMensajesPrivados"></ul>
+      </div>
     </div>
 
     <button class="btn btn-outline-danger" id="btnSalir">Logout</button>
 
     <script src="./socket.io/socket.io.js"></script>
     <script src="./js/chat.js"></script>
-</body>
+  </body>
 </html>
